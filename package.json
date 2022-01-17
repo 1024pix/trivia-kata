@@ -4,13 +4,17 @@
   "description": "Test with node.js =====================",
   "main": "game.js",
   "scripts": {
-    "test": "mocha src/**/*.spec.js"
+    "test": "mocha src/**/*.spec.js",
+    "cov": "nyc mocha src/**/*.spec.js"
   },
   "author": "",
   "license": "GPL v3",
-  "dependencies": {},
+  "dependencies": {
+    "random": "^3.0.6"
+  },
   "devDependencies": {
     "mocha": "^5.2.0",
+    "nyc": "^15.1.0",
     "should": "^13.2.1"
   }
 }

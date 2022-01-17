@@ -1,3 +1,8 @@
+const random = require('random')
+const seedrandom = require('seedrandom')
+
+random.use(seedrandom('pix kata!'))
+
 var Game = function () {
   var players = new Array();
   var places = new Array(6);
@@ -176,11 +181,15 @@ game.add('Chet');
 game.add('Pat');
 game.add('Sue');
 
+function random_wrapper() {
+  return random.float((min = 0), (max = 1));
+}
+
 do {
 
-  game.roll(Math.floor(Math.random() * 6) + 1);
+  game.roll(Math.floor(random_wrapper() * 6) + 1);
 
-  if (Math.floor(Math.random() * 10) == 7) {
+  if (Math.floor(random_wrapper() * 10) == 7) {
     notAWinner = game.wrongAnswer();
   } else {
     notAWinner = game.wasCorrectlyAnswered();
