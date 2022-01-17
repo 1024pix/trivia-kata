@@ -12,15 +12,13 @@ describe("The test environment", function () {
 });
 
 /**
- * On veut rendre l'exécution déterministe (toujours la même à chaque fois).
- * Pour faire ça on veut figer le random
+ * On a mis une seed au générateur de nombres aléatoires (rng)
  *
- * Une séquence connue, loop de 1 à 6
+ * Extraire le code mis à la racine à partir de la ligne 178
  *
- * générer un grand tableau avec plein de random dedans dans un json et
- * parcourir le tableau au lieu de faire du random
+ * Faire des scenari avec des nombres de joueurs différents pour atteindre 100% de couverture de test
  *
- * Mettre une seed au générateur de nombres aléatoires (rng)
+ * Trouver un moyen de vérifier que comportement n'a pas changé (=> automatiser les asserts)
  */
 describe("Your specs...", function () {
   // it ...

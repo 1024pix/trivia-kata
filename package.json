@@ -4,7 +4,7 @@
   "description": "Test with node.js =====================",
   "main": "game.js",
   "scripts": {
-    "test": "mocha src/**/*.spec.js",
+    "test": "NODE_ENV=test mocha src/**/*.spec.js",
     "cov": "nyc mocha src/**/*.spec.js"
   },
   "author": "",

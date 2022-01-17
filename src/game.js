@@ -1,7 +1,9 @@
 const random = require('random')
 const seedrandom = require('seedrandom')
 
-random.use(seedrandom('pix kata!'))
+if(process.env.NODE_ENV == "test") {
+  random.use(seedrandom('pix kata!'))
+};
 
 var Game = function () {
   var players = new Array();
